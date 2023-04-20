@@ -3,7 +3,31 @@
 @tailwind utilities;
 
 body {
-  color: #fff;
-  background-color: #000;
+  background-color: #121214;
   font-family: "Inter", system-ui, -apple-system;
+}
+
+h1 {
+  font-size: 32px;
+  color: #e1e1e6;
+}
+
+h2 {
+  font-size: 20px;
+  color: #e1e1e6;
+}
+
+p {
+  font-size: 18px;
+  color: #c4c4c4;
+}
+
+span {
+  color: #00b37e;
+}
+
+.container {
+  width: min(1216px, 100%);
+  padding-inline: 24px;
+  margin-inline: auto;
 }
