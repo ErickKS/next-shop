@@ -1,5 +1,10 @@
 import "./globals.css";
 
+export const metadata = {
+  title: "Shop",
+  description: "T-shirt shop"
+};
+
 export default function RootLayout({
   children
 }: {

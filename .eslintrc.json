@@ -38,7 +38,7 @@
         "groups": [
           ["/^react/", "/^next/", "/@next/"],
           "/pages/",
-          "/components/",
+          ["/patterns/", "/components/"],
           "/module/",
           "/^@shared/",
           "/absolute/",

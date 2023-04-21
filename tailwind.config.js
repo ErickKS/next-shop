@@ -27,7 +27,7 @@ module.exports = {
       md: "20px",
       sm: "18px"
     },
-    backGroundColor: {
+    backgroundImage: {
       gradient: "linear-gradient(180deg, #1EA483 0%, #7465D4 100%);"
     }
   },
