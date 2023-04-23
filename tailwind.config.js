@@ -29,6 +29,17 @@ module.exports = {
     },
     backgroundImage: {
       gradient: "linear-gradient(180deg, #1EA483 0%, #7465D4 100%);"
+    },
+    extend: {
+      animation: {
+        translate: "translate .1s linear forwards"
+      },
+      keyframes: {
+        translate: {
+          "0%": { transform: "translateX(120px)" },
+          "100%": { transform: "translateX(0)" }
+        }
+      }
     }
   },
   plugins: []

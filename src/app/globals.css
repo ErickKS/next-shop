@@ -5,6 +5,7 @@
 body {
   background-color: #121214;
   font-family: "Inter", system-ui, -apple-system;
+  overflow: hidden;
 }
 
 h1 {
