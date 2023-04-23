@@ -11,7 +11,7 @@ export default function Cart() {
     <>
       <DialogPrimitive.Root>
         <DialogPrimitive.Trigger className="relative flex items-center justify-center w-12 h-12 rounded-md ml-auto bg-gray-800 ">
-          <Image src="/bag.svg" alt="bag" width={24} height={24} />
+          <Image src="/bag.svg" alt="" width={24} height={24} />
         </DialogPrimitive.Trigger>
 
         <DialogPrimitive.Portal>
@@ -19,13 +19,7 @@ export default function Cart() {
             <div>
               <div className="text-right">
                 <DialogPrimitive.Close className="mr-auto transition hover:opacity-80">
-                  <Image
-                    src="/x.svg"
-                    alt="close icon"
-                    width={24}
-                    height={24}
-                    priority
-                  />
+                  <Image src="/x.svg" alt="" width={24} height={24} />
                 </DialogPrimitive.Close>
               </div>
               <h2 className="mt-6">Sacola de compras</h2>
