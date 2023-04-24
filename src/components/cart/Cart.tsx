@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import Button from "../Button";
+import CartProduct from "./CartProduct";
 
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
@@ -24,7 +25,11 @@ export default function Cart() {
               </div>
               <h2 className="mt-6">Sacola de compras</h2>
             </div>
-            <div className=""></div>
+
+            <div className="flex flex-col gap-6">
+              <CartProduct />
+            </div>
+
             <div className="flex flex-col">
               <div className="flex justify-between text-gray-100">
                 <span className="text-sm text-gray-300">Quantidade</span>
