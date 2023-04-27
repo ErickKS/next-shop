@@ -9,7 +9,7 @@ import { IProduct } from "@/contexts/CartContext";
 import { useCart } from "@/hooks/useCart";
 
 export default function Product() {
-  const { addToCart } = useCart();
+  const { addToCart, checkIfItemAlreadyExists } = useCart();
 
   function handleAddToCart(
     e: MouseEvent<HTMLButtonElement>,
@@ -24,7 +24,7 @@ export default function Product() {
       {productsList.map((product) => (
         <Link
           key={product.id}
-          href="/"
+          href={`/product/${product.id}`}
           className="embla__slide group relative flex items-center justify-center w-[696px] h-[656px] bg-gradient rounded-lg overflow-hidden"
         >
           <Image
@@ -38,7 +38,10 @@ export default function Product() {
               <h2>{product.name}</h2>
               <span className="text-lg font-bold">R$ {product.price}</span>
             </div>
-            <CartButton onClick={(e) => handleAddToCart(e, product)} />
+            <CartButton
+              disabled={checkIfItemAlreadyExists(product.id)}
+              onClick={(e) => handleAddToCart(e, product)}
+            />
           </footer>
         </Link>
       ))}

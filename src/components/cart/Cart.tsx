@@ -3,11 +3,19 @@
 import Image from "next/image";
 
 import Button from "../Button";
-import CartProduct from "./CartProduct";
 
+import { useCart } from "@/hooks/useCart";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 export default function Cart() {
+  const { cartItems, cartTotal, removeCartItem } = useCart();
+  const cartQuantity = cartItems.length;
+
+  const formattedCartTotal = new Intl.NumberFormat("pt-br", {
+    style: "currency",
+    currency: "BRL"
+  }).format(cartTotal);
+
   return (
     <>
       <DialogPrimitive.Root>
@@ -27,17 +35,47 @@ export default function Cart() {
             </div>
 
             <div className="flex flex-col gap-6">
-              <CartProduct />
+              {cartQuantity <= 0 && <p>Parece que seu carrinho está vazio</p>}
+
+              {cartItems.map((cartItem) => (
+                <div className="flex gap-5" key={cartItem.id}>
+                  <div className="flex justify-center items-center w-[100px] h-24 bg-gradient rounded-lg">
+                    <Image
+                      src={`/images/${cartItem.imageUrl}.png`}
+                      alt="product image"
+                      width={94}
+                      height={94}
+                    />
+                  </div>
+
+                  <div className="flex flex-col justify-start">
+                    <p className="text-sm text-gray-100">{cartItem.name}</p>
+                    <span className="text-sm font-semibold text-gray-100">
+                      R$ {cartItem.price}
+                    </span>
+                    <button
+                      className="inline-flex mt-auto font-semibold text-green-500 transition hover:text-green-300"
+                      onClick={() => removeCartItem(cartItem.id)}
+                    >
+                      Remover
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="flex flex-col">
               <div className="flex justify-between text-gray-100">
                 <span className="text-sm text-gray-300">Quantidade</span>
-                <span className="text-sm text-gray-300">3 itens</span>
+                <span className="text-sm text-gray-300">
+                  {cartQuantity} {cartQuantity === 1 ? "item" : "itens"}
+                </span>
               </div>
               <div className="flex justify-between mb-10 items-center font-semibold">
                 <span className="text-sm text-gray-100">Valor total</span>
-                <span className="text-lg text-gray-100">R$ 270,00</span>
+                <span className="text-lg text-gray-100">
+                  {formattedCartTotal}
+                </span>
               </div>
               <Button text="Finalizar compra" />
             </div>
