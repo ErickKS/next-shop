@@ -3,7 +3,6 @@
 import Product from "@/components/Product";
 import Header from "@/patterns/Header";
 
-import { CartContextProvider } from "@/contexts/CartContext";
 import useEmblaCarousel from "embla-carousel-react";
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
   });
 
   return (
-    <CartContextProvider>
+    <>
       <Header />
       <main className="container flex items-center justify-between">
         <div className="embla" ref={emblaRef}>
@@ -23,6 +22,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </CartContextProvider>
+    </>
   );
 }

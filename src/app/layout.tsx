@@ -1,6 +1,12 @@
+"use client";
+
+import { Metadata } from "next";
+
+import { CartContextProvider } from "@/contexts/CartContext";
+
 import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Shop",
   description: "T-shirt shop"
 };
@@ -12,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <CartContextProvider>
+        <body>{children}</body>
+      </CartContextProvider>
     </html>
   );
 }

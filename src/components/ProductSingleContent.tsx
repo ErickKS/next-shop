@@ -5,15 +5,7 @@ import { IProduct } from "@/contexts/CartContext";
 import { useCart } from "@/hooks/useCart";
 
 interface ProductSingleContentProps {
-  product: {
-    id: string;
-    name: string;
-    imageUrl: string;
-    price: number;
-    numberPrice: number;
-    description: string;
-    defaultPriceId: string;
-  };
+  product: IProduct;
 }
 
 export default function ProductSingleContent({
