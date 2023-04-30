@@ -44,7 +44,7 @@ export default function ProductSingleContent({
         <button
           disabled={checkIfItemAlreadyExists(product.id)}
           onClick={(e) => handleAddToCart(e, product)}
-          className="flex items-center justify-center w-full h-16 rounded-md bg-green-500 font-semibold text-gray-100 transition hover:bg-green-300 disabled:cursor-not-allowed disabled:hover:bg-green-500"
+          className="flex items-center justify-center w-full h-16 rounded-md bg-green-500 font-semibold text-gray-100 transition hover:bg-green-300 disabled:cursor-not-allowed disabled:bg-green-500/75"
         >
           {itemAlreadyInCart
             ? "Item já adicionado no carrinho"
