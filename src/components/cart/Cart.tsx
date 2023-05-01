@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-import Button from "../Button";
+import { useRouter } from "next/navigation";
 
 import { useCart } from "@/hooks/useCart";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
@@ -10,11 +9,16 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 export default function Cart() {
   const { cartItems, cartTotal, removeCartItem } = useCart();
   const cartQuantity = cartItems.length;
+  const router = useRouter();
 
   const formattedCartTotal = new Intl.NumberFormat("pt-br", {
     style: "currency",
     currency: "BRL"
   }).format(cartTotal);
+
+  function handlePayout() {
+    router.push("/payout");
+  }
 
   return (
     <>
@@ -77,7 +81,13 @@ export default function Cart() {
                   {formattedCartTotal}
                 </span>
               </div>
-              <Button text="Finalizar compra" />
+              <button
+                onClick={handlePayout}
+                disabled={cartQuantity <= 0 ? true : false}
+                className="flex justify-center py-5 rounded-lg bg-green-500 text-sm font-semibold text-white transition hover:bg-green-300 disabled:cursor-not-allowed disabled:bg-green-500/75"
+              >
+                Finalizar compra
+              </button>
             </div>
           </DialogPrimitive.Content>
         </DialogPrimitive.Portal>
