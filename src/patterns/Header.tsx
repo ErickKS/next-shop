@@ -3,7 +3,11 @@ import { usePathname, useRouter } from "next/navigation";
 
 import Cart from "@/components/cart/Cart";
 
-export default function Header() {
+interface HeaderProps {
+  hasCart: boolean;
+}
+
+export default function Header({ hasCart }: HeaderProps) {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -16,7 +20,7 @@ export default function Header() {
       >
         <Image src="/logo.svg" alt="logo" width={130} height={52} priority />
       </button>
-      <Cart />
+      {hasCart && <Cart />}
     </header>
   );
 }

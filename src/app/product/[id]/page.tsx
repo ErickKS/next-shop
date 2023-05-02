@@ -15,7 +15,7 @@ export default function ProductPageSingle({ params }: ProductPageSingleProps) {
 
   return (
     <>
-      <Header />
+      <Header hasCart />
       <main className="container grid grid-cols-2 gap-16">
         <ProductSingleContent product={product} />
       </main>

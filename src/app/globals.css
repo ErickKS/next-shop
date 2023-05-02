@@ -32,3 +32,7 @@ span {
   padding-inline: 24px;
   margin-inline: auto;
 }
+
+.payout + .payout {
+  margin-left: calc(-136px / 2);
+}

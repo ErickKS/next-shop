@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header hasCart />
       <main className="container flex items-center justify-between">
         <div className="embla" ref={emblaRef}>
           <div className="embla__container flex gap-12 mx-auto">
