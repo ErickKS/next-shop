@@ -9,26 +9,21 @@ module.exports = {
   theme: {
     colors: {
       black: "#000",
-      white: "#FFF",
+      white: "#f5f5f5",
 
-      "gray-900": "#121214",
-      "gray-800": "#202024",
-      "gray-700": "#3B3B30",
-      "gray-500": "#8D8D99",
-      "gray-300": "#C4C4CC",
-      "gray-100": "#E1E1E6",
+      "gray-900": "#111111",
+      "gray-800": "#1A1C1E",
+      "gray-700": "#515151",
+      "gray-100": "#D1D1D2",
 
-      "green-500": "#00875F",
-      "green-300": "#00B37E"
+      "green-500": "#44D62C",
+      "green-300": "#73E161"
     },
     fontSize: {
       xl: "32px",
       lg: "24px",
       md: "20px",
       sm: "18px"
-    },
-    backgroundImage: {
-      gradient: "linear-gradient(180deg, #1EA483 0%, #7465D4 100%);"
     },
     extend: {
       animation: {
