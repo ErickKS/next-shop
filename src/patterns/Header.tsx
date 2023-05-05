@@ -14,11 +14,18 @@ export default function Header({ hasCart }: HeaderProps) {
   return (
     <header className="container flex justify-center py-10">
       <button
+        className="outline-none"
         onClick={
           pathname !== "/" ? () => router.back() : () => router.refresh()
         }
       >
-        <Image src="/logo.svg" alt="logo" width={130} height={52} priority />
+        <Image
+          src="/razer-logo.svg"
+          alt="logo"
+          width={200}
+          height={48}
+          priority
+        />
       </button>
       {hasCart && <Cart />}
     </header>
