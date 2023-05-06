@@ -14,7 +14,8 @@ module.exports = {
 
       "gray-900": "#111111",
       "gray-800": "#1A1C1E",
-      "gray-700": "#515151",
+      "gray-700": "#767778",
+      "gray-600": "#515151",
       "gray-100": "#D1D1D2",
 
       "green-500": "#44D62C",
@@ -27,6 +28,9 @@ module.exports = {
       sm: "18px"
     },
     extend: {
+      boxShadow: {
+        left: "0 0 6px #00FF00"
+      },
       animation: {
         translate: "translate .1s linear forwards"
       },

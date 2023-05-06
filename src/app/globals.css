@@ -14,8 +14,9 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
-  color: #e1e1e6;
+  font-size: 24px;
+  font-weight: 600;
+  color: #f5f5f5;
 }
 
 p {
