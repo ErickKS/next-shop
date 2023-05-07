@@ -14,8 +14,8 @@ module.exports = {
 
       "gray-900": "#111111",
       "gray-800": "#1A1C1E",
-      "gray-700": "#767778",
-      "gray-600": "#515151",
+      "gray-700": "#515151",
+      "gray-600": "#767778",
       "gray-100": "#D1D1D2",
 
       "green-500": "#44D62C",
@@ -25,7 +25,8 @@ module.exports = {
       xl: "32px",
       lg: "24px",
       md: "20px",
-      sm: "18px"
+      sm: "18px",
+      xs: "14px"
     },
     extend: {
       boxShadow: {

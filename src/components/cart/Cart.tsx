@@ -81,13 +81,13 @@ export default function Cart() {
             <footer className="flex flex-col">
               <div className="flex flex-col gap-1">
                 <div className="flex justify-between text-gray-100 font-semibold text-sm">
-                  <span className="text-gray-700">Subtotal:</span>
+                  <span className="text-gray-600">Subtotal:</span>
                   <span className="text-white">
                     {cartQuantity} {cartQuantity === 1 ? "item" : "itens"}
                   </span>
                 </div>
                 <div className="flex justify-between text-gray-100 font-semibold text-sm">
-                  <span className="text-gray-700">Discount:</span>
+                  <span className="text-gray-600">Discount:</span>
                   <span className="text-white">
                     {cartQuantity} {cartQuantity === 1 ? "item" : "itens"}
                   </span>

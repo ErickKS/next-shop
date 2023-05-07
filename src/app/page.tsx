@@ -3,23 +3,13 @@
 import Product from "@/components/Product";
 import Header from "@/patterns/Header";
 
-import useEmblaCarousel from "embla-carousel-react";
-
 export default function Home() {
-  const [emblaRef] = useEmblaCarousel({
-    align: "start",
-    skipSnaps: false,
-    dragFree: true
-  });
-
   return (
     <>
       <Header hasCart />
       <main className="container flex items-center justify-between">
-        <div className="embla" ref={emblaRef}>
-          <div className="embla__container flex gap-12 mx-auto">
-            <Product />
-          </div>
+        <div className="grid grid-cols-4 gap-4 py-7">
+          <Product />
         </div>
       </main>
     </>
