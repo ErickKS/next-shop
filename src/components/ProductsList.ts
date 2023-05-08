@@ -1,38 +1,74 @@
 export const productsList = [
   {
     id: "0",
-    name: "Camiseta Maratona Explorer",
-    imageUrl: "image-1",
-    price: 79.99,
-    numberPrice: 79.99,
-    description: "primeira camisa",
+    name: "Razer Mamba Elite",
+    imageUrl: "razer-mamba",
+    price: 89.99,
+    discount: 50,
+    description: "Wired Mouse with Extended Razer Chroma™",
     defaultPriceId: "0"
   },
   {
     id: "1",
-    name: "Camiseta Maratona Explorer 2.0",
-    imageUrl: "image-2",
+    name: "Razer Hammerhead True Wireless Earbuds",
+    imageUrl: "razer-hammerhead",
     price: 89.99,
-    numberPrice: 89.99,
-    description: "segunda camisa",
+    discount: 50,
+    description: "True Wireless Earbuds",
     defaultPriceId: "3"
   },
   {
     id: "2",
-    name: "Camiseta Maratona Explorer 3.0",
-    imageUrl: "image-3",
-    price: 79.99,
-    numberPrice: 79.99,
-    description: "terceira camisa",
+    name: "Razer Huntsman Tournament Edition",
+    imageUrl: "razer-hustsman",
+    price: 129.99,
+    discount: 30,
+    description: "Compact Gaming Keyboard with Razer™ Linear Optical Switches",
     defaultPriceId: "2"
   },
   {
     id: "3",
-    name: "Camiseta Maratona Explorer 4.0",
-    imageUrl: "image-4",
-    price: 69.99,
-    numberPrice: 69.99,
-    description: "quarta camisa",
+    name: "Razer Blade 17 Models (2022)",
+    imageUrl: "razer-blade-17",
+    price: 2799.99,
+    discount: 17,
+    description: "Desktop Replacement Laptop with 12th Gen Processors",
     defaultPriceId: "3"
+  },
+  {
+    id: "4",
+    name: "Razer Blade 15 Models (2022)",
+    imageUrl: "razer-blade-15",
+    price: 2499.99,
+    discount: 16,
+    description: "Flagship 15-inch Laptop for Power and Portability",
+    defaultPriceId: "4"
+  },
+  {
+    id: "5",
+    name: "Razer Naga Left Handed Edition",
+    imageUrl: "razer-naga",
+    price: 99.99,
+    discount: 0,
+    description: "Ergonomic MMO Gaming Mouse for Left-Handed Users",
+    defaultPriceId: "5"
+  },
+  {
+    id: "6",
+    name: "Razer Basilisk V3 X HyperSpeed",
+    imageUrl: "razer-brasilisk-v3-hyperspeed",
+    price: 69.99,
+    discount: 0,
+    description: "Customizable Wireless Gaming Mouse with RGB Lighting",
+    defaultPriceId: "6"
+  },
+  {
+    id: "7",
+    name: "Razer BlackShark V2 Special Edition",
+    imageUrl: "razer-blackshark-v2",
+    price: 109.99,
+    discount: 0,
+    description: "Multi-platform wired esports headset",
+    defaultPriceId: "7"
   }
 ];

@@ -5,7 +5,7 @@ export interface IProduct {
   name: string;
   imageUrl: string;
   price: number;
-  numberPrice: number;
+  discount: number;
   description: string;
   defaultPriceId: string;
 }
@@ -28,7 +28,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   const [cartItems, setCartItems] = useState<IProduct[]>([]);
 
   const cartTotal = cartItems.reduce((total, product) => {
-    return total + product.numberPrice;
+    return total + product.price;
   }, 0);
 
   function addToCart(product: IProduct) {

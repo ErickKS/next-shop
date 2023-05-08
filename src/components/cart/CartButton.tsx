@@ -5,7 +5,7 @@ type CartButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 export default function CartButton({ ...props }: CartButtonProps) {
   return (
     <button
-      className="group flex items-center gap-2 w-[154px] py-2 px-4 rounded-lg border-2 border-green-500 bg-transparent text-white font-medium transition hover:bg-green-300 hover:text-black disabled:cursor-not-allowed disabled:hover:bg-green-500"
+      className="group flex items-center gap-2 w-[154px] py-2 px-4 rounded-lg border-2 border-green-500 bg-transparent text-white font-medium transition select-none hover:bg-green-300 hover:text-black disabled:cursor-not-allowed disabled:hover:bg-green-500"
       {...props}
     >
       <svg

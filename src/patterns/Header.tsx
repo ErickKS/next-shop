@@ -25,6 +25,7 @@ export default function Header({ hasCart }: HeaderProps) {
           width={200}
           height={48}
           priority
+          className="select-none"
         />
       </button>
       {hasCart && <Cart />}
