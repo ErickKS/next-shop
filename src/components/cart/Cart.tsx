@@ -7,9 +7,26 @@ import { useCart } from "@/hooks/useCart";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 export default function Cart() {
-  const { cartItems, cartTotal, removeCartItem } = useCart();
+  const { cartItems, cartSubtotal, cartDiscount, cartTotal, removeCartItem } =
+    useCart();
   const cartQuantity = cartItems.length;
   const router = useRouter();
+
+  function discountValue(price: number, discount: number) {
+    let value = (price * discount) / 100;
+    value = +(price - value).toFixed(2);
+
+    return value;
+  }
+  const formattedCartSubtotal = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD"
+  }).format(cartSubtotal);
+
+  const formattedCartDiscount = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD"
+  }).format(cartDiscount);
 
   const formattedCartTotal = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -29,7 +46,7 @@ export default function Cart() {
         </DialogPrimitive.Trigger>
 
         <DialogPrimitive.Portal>
-          <DialogPrimitive.Content className="absolute top-0 right-0 grid grid-rows-[32px_1fr_255px] gap-8 w-[480px] h-screen pb-6 pt-12 px-12 bg-gray-800 shadow-left data-[state='open']:animate-translate">
+          <DialogPrimitive.Content className="fixed top-0 right-0 grid grid-rows-[32px_1fr_255px] gap-8 w-[480px] h-screen pb-6 pt-12 px-8 bg-gray-800 shadow-left data-[state='open']:animate-translate">
             <header className="flex justify-between">
               <h2>Cart</h2>
               <DialogPrimitive.Close className="group outline-none">
@@ -48,27 +65,31 @@ export default function Cart() {
               </DialogPrimitive.Close>
             </header>
 
-            <main className="flex flex-col gap-6">
-              {cartQuantity <= 0 && <p>Parece que seu carrinho está vazio</p>}
+            <main
+              className="flex flex-col gap-6 pr-1 overflow-y-scroll"
+              id="cartItems"
+            >
+              {cartQuantity <= 0 && <p>Your cart is empty</p>}
 
               {cartItems.map((cartItem) => (
                 <div className="flex gap-5" key={cartItem.id}>
-                  <div className="flex justify-center items-center w-[100px] h-24 bg-gradient rounded-lg">
+                  <div className="flex justify-center items-center my-auto w-[100px] h-24 bg-gray-900 rounded-lg">
                     <Image
                       src={`/images/${cartItem.imageUrl}.png`}
                       alt="product image"
-                      width={94}
-                      height={94}
+                      width={96}
+                      height={96}
+                      className="select-none"
                     />
                   </div>
 
                   <div className="flex flex-col justify-start">
-                    <p className="text-sm text-gray-100">{cartItem.name}</p>
+                    <p className="text-sm text-white">{cartItem.name}</p>
                     <span className="text-sm font-semibold text-gray-100">
-                      R$ {cartItem.price}
+                      ${discountValue(cartItem.price, cartItem.discount)}
                     </span>
                     <button
-                      className="inline-flex mt-auto font-semibold text-green-500 transition hover:text-green-300"
+                      className="inline-flex mt-auto font-semibold text-green-500 outline-none transition hover:text-green-300 focus:opacity-80"
                       onClick={() => removeCartItem(cartItem.id)}
                     >
                       Remover
@@ -82,15 +103,11 @@ export default function Cart() {
               <div className="flex flex-col gap-1">
                 <div className="flex justify-between text-gray-100 font-semibold text-sm">
                   <span className="text-gray-600">Subtotal:</span>
-                  <span className="text-white">
-                    {cartQuantity} {cartQuantity === 1 ? "item" : "itens"}
-                  </span>
+                  <span className="text-white">{formattedCartSubtotal}</span>
                 </div>
                 <div className="flex justify-between text-gray-100 font-semibold text-sm">
                   <span className="text-gray-600">Discount:</span>
-                  <span className="text-white">
-                    {cartQuantity} {cartQuantity === 1 ? "item" : "itens"}
-                  </span>
+                  <span className="text-white">{formattedCartDiscount}</span>
                 </div>
               </div>
 

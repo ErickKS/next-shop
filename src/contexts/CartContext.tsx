@@ -12,6 +12,8 @@ export interface IProduct {
 
 interface CartContextData {
   cartItems: IProduct[];
+  cartSubtotal: number;
+  cartDiscount: number;
   cartTotal: number;
   addToCart: (product: IProduct) => void;
   removeCartItem: (productId: string) => void;
@@ -27,8 +29,14 @@ export const CartContext = createContext({} as CartContextData);
 export function CartContextProvider({ children }: CartContextProviderProps) {
   const [cartItems, setCartItems] = useState<IProduct[]>([]);
 
-  const cartTotal = cartItems.reduce((total, product) => {
+  const cartSubtotal = cartItems.reduce((total, product) => {
     return total + product.price;
+  }, 0);
+  const cartDiscount = cartItems.reduce((total, product) => {
+    return total + (product.price * product.discount) / 100;
+  }, 0);
+  const cartTotal = cartItems.reduce((total, product) => {
+    return total + product.price - (product.price * product.discount) / 100;
   }, 0);
 
   function addToCart(product: IProduct) {
@@ -47,6 +55,8 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     <CartContext.Provider
       value={{
         cartItems,
+        cartSubtotal,
+        cartDiscount,
         cartTotal,
         addToCart,
         removeCartItem,

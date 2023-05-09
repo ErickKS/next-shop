@@ -10,11 +10,11 @@ export const productsList = [
   },
   {
     id: "1",
-    name: "Razer Hammerhead True Wireless Earbuds",
-    imageUrl: "razer-hammerhead",
-    price: 89.99,
-    discount: 50,
-    description: "True Wireless Earbuds",
+    name: "Thermal Domination Bundle",
+    imageUrl: "razer-thermal-domination-bundle",
+    price: 179.98,
+    discount: 28,
+    description: "Defeat the heat with a cutting-edge combo",
     defaultPriceId: "3"
   },
   {
