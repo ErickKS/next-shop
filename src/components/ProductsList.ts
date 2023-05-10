@@ -6,6 +6,11 @@ export const productsList = [
     price: 89.99,
     discount: 50,
     description: "Wired Mouse with Extended Razer Chroma™",
+    detailedDescription: [
+      "Extended Lighting Zones",
+      "Advanced Ergonomics with Improved Side Grips",
+      "Hybrid On-Board Memory and Cloud Storage"
+    ],
     defaultPriceId: "0"
   },
   {
@@ -15,6 +20,10 @@ export const productsList = [
     price: 179.98,
     discount: 28,
     description: "Defeat the heat with a cutting-edge combo",
+    detailedDescription: [
+      "Razer Kunai Chroma - 120mm - 3 Fans",
+      "Razer PWM PC Fan Controller"
+    ],
     defaultPriceId: "3"
   },
   {
@@ -24,6 +33,11 @@ export const productsList = [
     price: 129.99,
     discount: 30,
     description: "Compact Gaming Keyboard with Razer™ Linear Optical Switches",
+    detailedDescription: [
+      "Razer™ Linear Optical Switch",
+      "Doubleshot PBT Keycaps",
+      "Onboard Memory"
+    ],
     defaultPriceId: "2"
   },
   {
@@ -33,6 +47,7 @@ export const productsList = [
     price: 2799.99,
     discount: 17,
     description: "Desktop Replacement Laptop with 12th Gen Processors",
+    detailedDescription: ["", "", ""],
     defaultPriceId: "3"
   },
   {
@@ -42,6 +57,7 @@ export const productsList = [
     price: 2499.99,
     discount: 16,
     description: "Flagship 15-inch Laptop for Power and Portability",
+    detailedDescription: ["", "", ""],
     defaultPriceId: "4"
   },
   {
@@ -51,6 +67,11 @@ export const productsList = [
     price: 99.99,
     discount: 0,
     description: "Ergonomic MMO Gaming Mouse for Left-Handed Users",
+    detailedDescription: [
+      "True Left-Handed Ergonomic Design",
+      "19+1 Programmable Buttons",
+      "Razer™ Focus+ Optical Sensor"
+    ],
     defaultPriceId: "5"
   },
   {
@@ -60,6 +81,11 @@ export const productsList = [
     price: 69.99,
     discount: 0,
     description: "Customizable Wireless Gaming Mouse with RGB Lighting",
+    detailedDescription: [
+      "Iconic Ergonomic Form with 9 Customizable Controls",
+      "Razer™ HyperSpeed Wireless (2.4 GHz) and Bluetooth",
+      "Up to 285 Hours of Battery Life  "
+    ],
     defaultPriceId: "6"
   },
   {
@@ -69,6 +95,11 @@ export const productsList = [
     price: 109.99,
     discount: 0,
     description: "Multi-platform wired esports headset",
+    detailedDescription: [
+      "Razer™ Triforce Titanium 50 mm Drivers",
+      "Razer™ HyperClear Cardioid Mic With USB Sound Card",
+      "Advanced passive noise cancellation"
+    ],
     defaultPriceId: "7"
   }
 ];

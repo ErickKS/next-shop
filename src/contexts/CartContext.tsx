@@ -7,6 +7,7 @@ export interface IProduct {
   price: number;
   discount: number;
   description: string;
+  detailedDescription: string[];
   defaultPriceId: string;
 }
 
