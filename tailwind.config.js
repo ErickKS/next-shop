@@ -30,7 +30,8 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        left: "0 0 6px #00FF00"
+        left: "0 0 6px #00FF00",
+        center: "0px 0px 2px 1px #44d62c66"
       },
       animation: {
         translate: "translate .1s linear forwards"
