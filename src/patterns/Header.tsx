@@ -14,7 +14,7 @@ export default function Header({ hasCart }: HeaderProps) {
   function handleRouter() {
     if (pathname === "/") router.refresh();
     else if (pathname === "/payout") window.location.reload();
-    else router.back();
+    else router.push("/");
   }
 
   return (
