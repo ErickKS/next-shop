@@ -1,15 +1,8 @@
 "use client";
 
-import { Metadata } from "next";
-
 import { CartContextProvider } from "@/contexts/CartContext";
 
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Shop",
-  description: "T-shirt shop"
-};
 
 export default function RootLayout({
   children
@@ -18,6 +11,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
+      <head>
+        <title>Razer Shop</title>
+      </head>
       <CartContextProvider>
         <body>{children}</body>
       </CartContextProvider>
