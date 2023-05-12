@@ -34,12 +34,17 @@ module.exports = {
         center: "0px 0px 2px 1px #44d62c66"
       },
       animation: {
-        translate: "translate .1s linear forwards"
+        translate: "translate .1s linear forwards",
+        opacity: "opacity .3s linear forwards"
       },
       keyframes: {
         translate: {
           "0%": { transform: "translateX(120px)" },
           "100%": { transform: "translateX(0)" }
+        },
+        opacity: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 }
         }
       }
     }
