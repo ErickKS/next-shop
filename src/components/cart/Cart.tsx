@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 import { useCart } from "@/hooks/useCart";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
+import Link from "next/link";
 
 export default function Cart() {
   const { cartItems, cartSubtotal, cartDiscount, cartTotal, removeCartItem } =
@@ -72,8 +73,14 @@ export default function Cart() {
               {cartQuantity <= 0 && <p>Your cart is empty</p>}
 
               {cartItems.map((cartItem) => (
-                <div className="flex gap-5" key={cartItem.id}>
-                  <div className="flex justify-center items-center my-auto w-[100px] h-24 bg-gray-900 rounded-lg">
+                <div
+                  key={cartItem.id}
+                  className="flex gap-5 transition hover:translate-x-1 focus:translate-x-1"
+                >
+                  <Link
+                    href={`/product/${cartItem.id}`}
+                    className="flex justify-center items-center my-auto w-[100px] h-24 bg-gray-900 rounded-lg"
+                  >
                     <Image
                       src={`/images/${cartItem.imageUrl}.png`}
                       alt="product image"
@@ -81,7 +88,7 @@ export default function Cart() {
                       height={96}
                       className="select-none"
                     />
-                  </div>
+                  </Link>
 
                   <div className="flex flex-col justify-start">
                     <p className="text-sm text-white">{cartItem.name}</p>
@@ -92,7 +99,7 @@ export default function Cart() {
                       className="inline-flex mt-auto font-semibold text-green-500 outline-none transition hover:text-green-300 focus:opacity-80"
                       onClick={() => removeCartItem(cartItem.id)}
                     >
-                      Remover
+                      Remove
                     </button>
                   </div>
                 </div>

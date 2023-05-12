@@ -70,7 +70,11 @@ export default function Product() {
             <CartButton
               disabled={checkIfItemAlreadyExists(product.id)}
               onClick={(e) => handleAddToCart(e, product)}
-            />
+            >
+              {checkIfItemAlreadyExists(product.id)
+                ? "Already in cart"
+                : "Add to cart"}
+            </CartButton>
           </footer>
         </Link>
       ))}
