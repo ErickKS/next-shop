@@ -45,7 +45,7 @@ export default function ProductSingleContent({
         <div>
           <h1>{product.name}</h1>
           <div className="flex items-baseline gap-2">
-            <span className="text-xl font-semibold">
+            <span className="text-xl text-green-500/80 font-semibold">
               {product.discount !== 0
                 ? `$${discountValue(product.price, product.discount)}`
                 : `$${product.price}`}

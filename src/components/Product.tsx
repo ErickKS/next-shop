@@ -37,9 +37,9 @@ export default function Product() {
           <div className="relative w-full h-[166px] bg-gray-900 rounded-lg">
             <Image
               src={`/images/${product.imageUrl}.png`}
-              alt=""
-              width={168}
+              width={166}
               height={166}
+              alt=""
               className="mx-auto select-none"
             />
             {product.discount && (

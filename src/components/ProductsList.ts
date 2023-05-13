@@ -42,22 +42,31 @@ export const productsList = [
   },
   {
     id: "3",
-    name: "Razer Blade 17 Models (2022)",
-    imageUrl: "razer-blade-17",
-    price: 2799.99,
-    discount: 17,
-    description: "Desktop Replacement Laptop with 12th Gen Processors",
-    detailedDescription: ["", "", ""],
+    name: "Razer Enki Pro",
+    imageUrl: "razer-enki-pro",
+    price: 999.99,
+    discount: 10,
+    description:
+      "Premium Gaming Chair with Alcantara® Leather for All-Day Comfort",
+    detailedDescription: [
+      "Upholstered with Alcantara",
+      "Designed for All-day Comfort",
+      "Built-in Lumbar Arch"
+    ],
     defaultPriceId: "3"
   },
   {
     id: "4",
-    name: "Razer Blade 15 Models (2022)",
-    imageUrl: "razer-blade-15",
-    price: 2499.99,
-    discount: 16,
-    description: "Flagship 15-inch Laptop for Power and Portability",
-    detailedDescription: ["", "", ""],
+    name: "Razer Rogue 17 Backpack",
+    imageUrl: "razer-rogue-17-backpack",
+    price: 149.99,
+    discount: 30,
+    description: "Travel backpack with 18” laptop compartment",
+    detailedDescription: [
+      "Tear and Water-Resistant Exterior With Rain Cover",
+      "Dedicated Slot for Laptops up to 18”",
+      "Chromatic Wordmark"
+    ],
     defaultPriceId: "4"
   },
   {

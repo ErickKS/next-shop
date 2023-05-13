@@ -39,10 +39,6 @@ p {
   color: #c4c4c4;
 }
 
-span {
-  color: #00b37e;
-}
-
 .container {
   width: min(1216px, 100%);
   padding-inline: 24px;
