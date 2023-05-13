@@ -15,7 +15,7 @@
     <br />
     <h3 align="center">
         <strong>
-            <code>&nbsp;<a href="/">live demo</a>&nbsp;</code>
+            <code>&nbsp;<a href="https://next-shop-erick-kuwahara.vercel.app">live demo</a>&nbsp;</code>
         </strong>
     </h3>
 </h3>
