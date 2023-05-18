@@ -43,7 +43,7 @@ export default function Cart() {
       <DialogPrimitive.Root>
         <DialogPrimitive.Trigger className="relative flex items-center justify-center gap-2 px-5 border-[1px] border-transparent p-3 rounded-lg ml-auto bg-gray-800 outline-none text-sm font-semibold text-white transition select-none hover:border-green-500 focus:border-green-500">
           <Image src="/cart.svg" alt="" width={24} height={24} />
-          My Cart
+          {window.innerWidth <= 455 ? "" : "My Cart"}
           {cartQuantity > 0 ? (
             <div className="absolute -top-[10px] -right-[10px] flex items-center justify-center w-6 h-6 bg-green-500 border-2 border-gray-900 rounded-full animate-opacity">
               <span className="relative -top-[1px] text-xs font-semibold text-black">

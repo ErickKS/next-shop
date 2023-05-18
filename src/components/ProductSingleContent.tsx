@@ -32,7 +32,7 @@ export default function ProductSingleContent({
 
   return (
     <>
-      <div className="flex items-center justify-center w-[384px] h-[380px] bg-gray-800 rounded-lg overflow-hidden">
+      <div className="flex items-center justify-center lg:w-[384px] h-[300px] lg:h-[380px] bg-gray-800 rounded-lg overflow-hidden">
         <Image
           src={`/images/${product.imageUrl}.png`}
           alt=""
@@ -43,7 +43,7 @@ export default function ProductSingleContent({
       </div>
       <div className="flex flex-col justify-between">
         <div>
-          <h1>{product.name}</h1>
+          <h1 className="leading-tight">{product.name}</h1>
           <div className="flex items-baseline gap-2">
             <span className="text-xl text-green-500/80 font-semibold">
               {product.discount !== 0
@@ -55,7 +55,7 @@ export default function ProductSingleContent({
             </span>
           </div>
 
-          <p className="mt-8">{product.description}</p>
+          <p className="mt-4 lg:mt-8">{product.description}</p>
           <ul className="list-disc relative left-5 mt-2">
             {product.detailedDescription.map((detail, index) => (
               <li className="text-sm text-gray-100" key={index}>
@@ -67,7 +67,7 @@ export default function ProductSingleContent({
         <button
           disabled={checkIfItemAlreadyExists(product.id)}
           onClick={(e) => handleAddToCart(e, product)}
-          className="group flex items-center justify-center gap-2 w-[352px] h-16 rounded-lg bg-transparent border-2 border-green-500 font-semibold text-white text-sm transition hover:bg-green-500 hover:text-black disabled:cursor-not-allowed disabled:opacity-75 disabled:bg-green-500 disabled:text-black"
+          className="group flex items-center justify-center gap-2 w-full max-w-[352px] h-16 mt-8 lg:mt-0 rounded-lg bg-transparent border-2 border-green-500 font-semibold text-white text-sm transition hover:bg-green-500 hover:text-black disabled:cursor-not-allowed disabled:opacity-75 disabled:bg-green-500 disabled:text-black"
         >
           <svg
             width="24"
