@@ -23,12 +23,10 @@ export default function Cart() {
     style: "currency",
     currency: "USD"
   }).format(cartSubtotal);
-
   const formattedCartDiscount = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD"
   }).format(cartDiscount);
-
   const formattedCartTotal = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD"
@@ -56,7 +54,7 @@ export default function Cart() {
         </DialogPrimitive.Trigger>
 
         <DialogPrimitive.Portal>
-          <DialogPrimitive.Content className="fixed top-0 right-0 grid grid-rows-[32px_1fr_255px] gap-8 w-[480px] h-screen pb-6 pt-12 px-8 bg-gray-800 shadow-left data-[state='open']:animate-translate">
+          <DialogPrimitive.Content className="fixed top-0 right-0 grid grid-rows-[32px_1fr_255px] gap-8 w-full sm:w-[480px] h-screen pb-6 pt-12 px-8 bg-gray-800 shadow-left data-[state='open']:animate-translate">
             <header className="flex justify-between">
               <h2>Cart</h2>
               <DialogPrimitive.Close className="group outline-none">
