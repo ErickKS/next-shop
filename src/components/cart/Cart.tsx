@@ -86,7 +86,7 @@ export default function Cart() {
                 >
                   <Link
                     href={`/product/${cartItem.id}`}
-                    className="flex justify-center items-center my-auto w-[100px] h-24 bg-gray-900 rounded-lg"
+                    className="hidden min-[490px]:flex justify-center items-center my-auto w-[100px] h-24 bg-gray-900 rounded-lg"
                   >
                     <Image
                       src={`/images/${cartItem.imageUrl}.png`}
